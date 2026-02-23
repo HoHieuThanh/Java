@@ -1,0 +1,29 @@
+package ex4;
+
+interface RemoteControl {
+
+    void powerOn();
+
+    // default method (Java 8+)
+    default void checkBattery() {
+        System.out.println("Pin on dinh");
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        RemoteControl smartLight = new RemoteControl() {
+
+            @Override
+            public void powerOn() {
+                System.out.println("Den da bat");
+            }
+        };
+
+        smartLight.powerOn();
+        smartLight.checkBattery();
+    }
+}
+
