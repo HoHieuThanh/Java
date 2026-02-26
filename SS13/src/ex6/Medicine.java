@@ -1,0 +1,50 @@
+package ex6;
+
+public class Medicine {
+
+    private String drugId;
+    private String drugName;
+    private double unitPrice;
+    private int quantity;
+
+    public Medicine(String drugId,
+                    String drugName,
+                    double unitPrice,
+                    int quantity){
+
+        this.drugId = drugId;
+        this.drugName = drugName;
+        this.unitPrice = unitPrice;
+        this.quantity = quantity;
+    }
+
+    public String getDrugId(){
+        return drugId;
+    }
+
+    public String getDrugName(){
+        return drugName;
+    }
+
+    public double getUnitPrice(){
+        return unitPrice;
+    }
+
+    public int getQuantity(){
+        return quantity;
+    }
+
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
+    }
+
+    // cộng thêm số lượng
+    public void addQuantity(int amount){
+        this.quantity += amount;
+    }
+
+    // thành tiền
+    public double getTotalPrice(){
+        return quantity * unitPrice;
+    }
+}
